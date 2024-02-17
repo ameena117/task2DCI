@@ -1,6 +1,10 @@
 import { useState } from "react";
 import randomColor from "randomcolor";
+<<<<<<< HEAD
 
+=======
+import { useState } from "react";
+>>>>>>> 395b77b5653846dcc73537d7fbf465b9c57e4ac0
 import "./App.css";
 import { Bedroom } from "./component/Bedroom";
 
@@ -10,14 +14,6 @@ export default function App() {
   const [state, setState] = useState(true);
   const [bgcolor, setBGColor] = useState("");
   const [color, setColor] = useState("");
-
-  function onClickSetNumber() {
-    setNum(num + 1);
-  }
-
-  function onClickSetText(text) {
-    setText("Hello");
-  }
 
   return (
     <div className="App" style={{ backgroundColor: bgcolor, color: color }}>
@@ -57,7 +53,7 @@ export default function App() {
       <hr />
       <button
         onClick={() => {
-          setBGColor(randomColor().toString(16));
+          setBGColor(randomColor());
         }}
       >
         Change BG Color Random
@@ -65,8 +61,7 @@ export default function App() {
 
       <button
         onClick={() => {
-          const color =
-            "#" + Math.round(Math.random() * (256 * 256 * 256)).toString(16);
+          const color = "#" + Math.round(Math.random() * (256 * 256 * 256));
           setColor(color);
         }}
       >
