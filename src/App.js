@@ -1,10 +1,5 @@
 import { useState } from "react";
 import randomColor from "randomcolor";
-<<<<<<< HEAD
-
-=======
-import { useState } from "react";
->>>>>>> 395b77b5653846dcc73537d7fbf465b9c57e4ac0
 import "./App.css";
 import { Bedroom } from "./component/Bedroom";
 
@@ -17,22 +12,10 @@ export default function App() {
 
   return (
     <div className="App" style={{ backgroundColor: bgcolor, color: color }}>
-      <button
-        onClick={() => {
-          onClickSetNumber();
-        }}
-      >
-        Increment Number
-      </button>
+      <button>Increment Number</button>
       <Bedroom name="Afnan" />
       <div>{num}</div>
-      <button
-        onClick={() => {
-          onClickSetText();
-        }}
-      >
-        Change Text To Hello
-      </button>
+      <button>Change Text To Hello</button>
       <div>{text}</div>
 
       <button
