@@ -1,30 +1,38 @@
+import { useState } from "react";
 import randomColor from "randomcolor";
-import { useEffect, useState } from "react";
+
 import "./App.css";
+import { Bedroom } from "./component/Bedroom";
 
 export default function App() {
   const [num, setNum] = useState(0);
   const [text, setText] = useState("");
   const [state, setState] = useState(true);
-  useEffect(() => {}, [state]);
   const [bgcolor, setBGColor] = useState("");
   const [color, setColor] = useState("");
-  useEffect(() => {}, [color]);
+
+  function onClickSetNumber() {
+    setNum(num + 1);
+  }
+
+  function onClickSetText(text) {
+    setText("Hello");
+  }
 
   return (
     <div className="App" style={{ backgroundColor: bgcolor, color: color }}>
       <button
         onClick={() => {
-          setNum(num + 1);
+          onClickSetNumber();
         }}
       >
         Increment Number
       </button>
+      <Bedroom name="Afnan" />
       <div>{num}</div>
-
       <button
         onClick={() => {
-          setText("Hello");
+          onClickSetText();
         }}
       >
         Change Text To Hello
