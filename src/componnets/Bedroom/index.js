@@ -5,25 +5,24 @@ const Bedroom = () => {
     num,
     text,
     state,
-    ColorValue,
-    handleIncrementNumber,
-    handleSetText,
-    handleSetState,
-    handleSetBGColorDynamic,
+    colorValue,
+    onClickIncrementNumber,
+    onClickSetText,
+    onClickSetState,
+    onClickSetBGColorDynamic,
   } = useBedroom();
   return (
-    
-    <div className= "app" style={{ backgroundColor: ColorValue }}>
+    <div className="app" style={{ backgroundColor: colorValue }}>
       <h2>Hoock</h2>
       <input
         type="text"
         placeholder="Write a color"
-        onChange={(e) => handleSetBGColorDynamic(e.target.value)}
+        onChange={(e) => onClickSetBGColorDynamic(e.target.value)}
       />
       <hr />
       <button
         onClick={() => {
-          handleIncrementNumber();
+          onClickIncrementNumber();
         }}
       >
         Increment Number
@@ -32,7 +31,7 @@ const Bedroom = () => {
       <hr />
       <button
         onClick={() => {
-          handleSetText();
+          onClickSetText();
         }}
       >
         Change Text To Hello
@@ -41,7 +40,7 @@ const Bedroom = () => {
       <hr />
       <button
         onClick={() => {
-          handleSetState();
+          onClickSetState();
         }}
       >
         Change State
